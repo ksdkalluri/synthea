@@ -304,7 +304,9 @@ public class GrowthDataErrorsEditor implements HealthRecordEditor {
     HealthRecord.Observation htObs = heightObservation(encounter);
     double heightValue = (Double) htObs.value;
     double jitter = random.nextDouble() - 0.5;
-    HealthRecord.Observation newObs = encounter.addObservation(htObs.start, htObs.type, heightValue + jitter,
+    HealthRecord.Observation newObs = encounter.addObservation(htObs.start, 
+        htObs.type, 
+        heightValue + jitter,
         "Body Height");
     newObs.category = "vital-signs";
     newObs.unit = "cm";
