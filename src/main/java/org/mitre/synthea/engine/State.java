@@ -70,7 +70,7 @@ public abstract class State implements Cloneable {
   private List<LookupTableTransitionOption> lookupTableTransition;
   public List<String> remarks;
   
-  protected static boolean ENABLE_PHYSIOLOGY_STATE =
+  public static boolean ENABLE_PHYSIOLOGY_STATE =
       Boolean.parseBoolean(Config.get("physiology.state.enabled", "false"));
 
   protected void initialize(Module module, String name, JsonObject definition) {
